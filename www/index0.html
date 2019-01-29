@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="button.css">
+    <title>Soundboard</title>
+  </head>
+  <body background="super.jpg">
+
+    <center>
+      <h1 style="color: #071871fa";>Soundboard</h1>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="timbre.js"></script>
+    <script src="freqs.jquery.js"></script>
+
+
+    <button type="button" style="background-color: #06366f4f" value="1" class="hinweis Modus"><h1>Modus</h1></button>
+    <button type="button" style="background-color: #06366f4f" value="2" class="hinweis Modus"><h1>Modus</h1></button>
+    <button type="button" style="background-color: #06366f4f" value="3" class="hinweis Modus"><h1>Modus</h1></button>
+    <button type="button" style="background-color: #06366f4f" value="4" class="hinweis Modus"><h1>Modus</h1></button>
+<h1>   ⠀      </h1>
+
+
+    <button type="button" style="background-color: #6f06684f" value="110" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="111" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="112" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="113" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <p> ⠀ </p>
+    <button type="button" style="background-color: #6f06684f" value="555" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="556" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="557" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="558" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <p> ⠀ </p>
+    <button type="button" style="background-color: #6f06684f" value="877" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="878" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="879" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+    <button type="button" style="background-color: #6f06684f" value="880" class="hinweis Frequenz"><h1>Frequenz</h1></button>
+
+<script>
+var Modus=1;
+$(".Modus").click(function(){
+  Modus=parseInt($(this).val());
+});
+$(".Frequenz").click(function(){
+  $(this).freqs({modus:Modus})
+})
+</script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <link rel="stylesheet" href="button.css">
+    <title>Soundboard</title>
+</head>
+
+<body background="super.jpg">
+
+  <center>
+    <h1 style="color: rgba(7,24,113,0.98);">Soundboard</h1>
+  <script src="jquery-1.12.4.js"></script>
+  <script src="timbre.js"></script>
+  <script src="freqs.jquery.js"></script>
+
+
+  <button type="button" style="background-color: rgba(6,54,111,0.31);" value="1" class="hinweis Modus"><h4>Modus</h4></button>
+  <button type="button" style="background-color: rgba(6,54,111,0.31);" value="2" class="hinweis Modus"><h4>Modus</h4></button>
+  <button type="button" style="background-color: rgba(6,54,111,0.31);" value="3" class="hinweis Modus"><h4>Modus</h4></button>
+  <button type="button" style="background-color: rgba(6,54,111,0.31);" value="4" class="hinweis Modus"><h4>Modus</h4></button>
+<h4>   ⠀      </h4>
+
+
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="110" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="111" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="112" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="113" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <p> ⠀ </p>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="555" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="556" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="557" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="558" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <p> ⠀ </p>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="877" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="878" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="879" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+  <button type="button" style="background-color: rgba(111,6,104,0.31);" value="880" class="hinweis Frequenz"><h4>Frequenz</h4></button>
+
+<script>
+var Modus=1;
+$(".Modus").click(function(){
+Modus=parseInt($(this).val());
+});
+$(".Frequenz").click(function(){
+$(this).freqs({modus:Modus})
+})
+</script>
+</body>
+
+</html>

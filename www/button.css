@@ -1,0 +1,15 @@
+.hinweis {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+}
+
+  .hinweis.Modus {
+  -webkit-transition-duration: 99.9s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.hinweis.Modus:hover {
+  background-color: black; /* Lime */
+  color: gray;
+}
